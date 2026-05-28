@@ -45,19 +45,27 @@ This project provides an educational computational model that connects DNA valid
 ```text
 central-dogma-sequence-analysis/
 |-- README.md
+|-- pyproject.toml
 |-- requirements.txt
-|-- main.py
-|-- central_dogma.py
-|-- analysis.py
-|-- visualization.py
+|-- src/
+|   `-- central_dogma/
+|       |-- __init__.py
+|       |-- __main__.py
+|       |-- analysis.py
+|       |-- cli.py
+|       |-- core.py
+|       |-- pipeline.py
+|       `-- visualization.py
 |-- data/
 |   `-- sample_sequences.csv
 |-- results/
-|   `-- .gitkeep
+|   |-- analysis_results.csv
+|   |-- amino_acid_composition.png
+|   |-- base_composition.png
+|   `-- codon_frequency.png
 |-- notebooks/
 |   `-- central_dogma_demo.ipynb
-`-- docs/
-    `-- report_outline.md
+`-- .gitignore
 ```
 
 ## Installation
@@ -65,14 +73,20 @@ central-dogma-sequence-analysis/
 Create and activate a Python virtual environment:
 
 ```bash
-python -m venv .venv
-.\.venv\Scripts\activate
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-Install the required Python packages inside the virtual environment:
+On Windows PowerShell, activate the virtual environment with:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Install the project in editable mode:
 
 ```bash
-pip install -r requirements.txt
+pip install -e .
 ```
 
 ## Usage
@@ -80,13 +94,19 @@ pip install -r requirements.txt
 Run the main analysis pipeline:
 
 ```bash
-python main.py
+central-dogma
 ```
 
-If the virtual environment is not activated, run the program directly with:
+You can also run the package as a Python module:
 
 ```bash
-.\.venv\Scripts\python main.py
+python -m central_dogma
+```
+
+Use custom input or output paths when needed:
+
+```bash
+central-dogma --input data/sample_sequences.csv --output-dir results
 ```
 
 The program reads input data from:
@@ -147,8 +167,6 @@ results/amino_acid_composition.png
 
 ## Contributors
 
-Add your group members here:
-
 1. Varel Tiara / 13523008
 2. Bryan Ho / 13523029
 3. Kenneth Poenadi / 13523040
@@ -156,3 +174,13 @@ Add your group members here:
 ## Submission Notes
 
 Video presentation link:
+
+## Pembagian Tugas
+
+| Anggota | Tanggung Jawab |
+| --- | --- |
+| Varel Tiara 13523008 | Menyusun latar belakang, rumusan masalah, dan landasan teori; menyiapkan serta memvalidasi dataset DNA, mengimplementasikan validasi DNA, transkripsi DNA ke RNA, dan translasi RNA ke protein. |
+| Bryan Ho 13523029 | Menyusun bagian metode dan analisis; mengimplementasikan perhitungan GC/AT content, base composition, codon frequency, serta membantu validasi hasil analisis pada output CSV. |
+| Kenneth Poenadi 13523040 | Menyusun bagian hasil-diskusi dan kesimpulan; mengimplementasikan deteksi start/stop codon, ORF detection, visualisasi grafik, alur program utama, dokumentasi penggunaan, serta mengedit video presentasi. |
+
+Semua anggota berkontribusi dalam integrasi kode, penyusunan laporan, analisis hasil, pembuatan materi presentasi, pengecekan program, dan review akhir sebelum pengumpulan.

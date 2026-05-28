@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "central-dogma-sequence-analysis"
+version = "0.1.0"
+description = "Educational DNA, RNA, and protein sequence analysis pipeline."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "matplotlib",
+    "pandas",
+]
+
+[project.scripts]
+central-dogma = "central_dogma.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
