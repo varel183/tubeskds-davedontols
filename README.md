@@ -180,7 +180,7 @@ Video presentation link:
 | Anggota | Tanggung Jawab |
 | --- | --- |
 | Varel Tiara 13523008 | Menyusun latar belakang, rumusan masalah, dan landasan teori; menyiapkan serta memvalidasi dataset DNA, mengimplementasikan validasi DNA, transkripsi DNA ke RNA, dan translasi RNA ke protein. |
-| Bryan Ho 13523029 | Menyusun bagian metode dan analisis; mengimplementasikan perhitungan GC/AT content, base composition, codon frequency, serta membantu validasi hasil analisis pada output CSV. |
+| Bryan Ho 13523029 | Menyusun bagian metode dan analisis, mengimplementasikan perhitungan GC/AT content, base composition, codon frequency, serta membantu validasi hasil analisis pada output CSV. |
 | Kenneth Poenadi 13523040 | Menyusun bagian hasil-diskusi dan kesimpulan; mengimplementasikan deteksi start/stop codon, ORF detection, visualisasi grafik, alur program utama, dokumentasi penggunaan, serta mengedit video presentasi. |
 
 Semua anggota berkontribusi dalam integrasi kode, penyusunan laporan, analisis hasil, pembuatan materi presentasi, pengecekan program, dan review akhir sebelum pengumpulan.
