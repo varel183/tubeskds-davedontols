@@ -173,7 +173,7 @@ results/amino_acid_composition.png
 
 ## Submission Notes
 
-Video presentation link:
+Video presentation link: https://youtu.be/SP8CGB4HBhE
 
 ## Pembagian Tugas
 
